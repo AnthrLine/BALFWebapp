@@ -56,10 +56,9 @@ eqfbitlles = []
 def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individualsgr, ef=equipsf, enf=equipsnf):
 
 	#WE LOAD THE WB EVERY TIME SO IT GETS UPDATED WITH THE NEW RESULTS
-	workbook = ""
-	sheet = ""
+	filename = 'Web.xlsx'
 	
-	workbook = load_workbook(filename="Web.xlsx", data_only=True)
+	workbook = load_workbook(filename=, data_only=True, read_only=True)
 	sheet = workbook.active
 
 	#GET THE NUMBER OF CANDIDATES/TEAMS

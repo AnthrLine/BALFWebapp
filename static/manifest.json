@@ -1,0 +1,19 @@
+{
+"name": "Bitlles a la fresca - classificacions",
+"short_name": "Bitllesalafresca",
+"description": "Consulta les classificacions de les Bitlles a la Fresca",
+"start_url": "/",
+"background_color": "#000000",
+"theme_color": "#000000",
+"display": "fullscreen",
+"orientation": "portrait-primary",
+"dir": "ltr",
+"lang": "ca-ES",
+"icons": [
+  {
+    "src": "static/favicon.ico",
+    "type": "image/ico",
+    "sizes": "144x144"
+  }
+]
+}

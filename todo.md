@@ -1,0 +1,5 @@
+- !Add animations
+- !!!Add ads
+- !!Make it look pretty
+- !!Grup, Jugador, Ronda
+- !Add SW

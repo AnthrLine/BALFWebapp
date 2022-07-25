@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+p {
+	color: white;
+	font-size: 6vw;
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	background-color: rgb(0,0,0);
+	width: 98%;
+}
+
+#headerlogo {
+	width: 25vw;
+	height: 25vw;
+	filter: invert(100%);
+}
+
+.podiumcontainer {
+	display: grid;
+	align-items: center;
+	grid-template-areas: "badge team total cdtotal";
+ 	gap: 0px;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.podiumelement:nth-child(1) {
+	margin: 7px;
+	border: 0px;
+	padding: 1px;
+	width: 11,5vw;
+	grid-area: badge;
+}
+
+.badge {
+	filter: invert(100%);
+	height: 15vw;
+	width: 10.9897;
+}
+
+.podiumelement:nth-child(2) {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	grid-area: team;
+}
+
+.podiumelement:nth-child(3) {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	grid-area: total;
+}
+
+.podiumelement:nth-child(4) {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	grid-area: cdtotal;
+	font-size: 3.5vw;
+	transform: translateY(1vw);
+}
+
+.tablecontainer {
+	display: grid;
+	align-items: center !important;
+	grid-template-areas: "dilluns dimarts dimecres dijous divendres bitlles"
+						 "dillunsp dimartsp dimecresp dijousp divendresp bitllesb";
+ 	gap: 0px;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.tableelement:nth-child(1) {
+	color: white;
+	font-size: 3.5vw !important;
+	grid-area: dilluns;
+	font-family: 'Lato', sans-serif;
+	align-items: center;
+}
+
+.tableelement:nth-child(2) {
+	color: white;
+	font-size: 3.5vw !important;
+	grid-area: dimarts;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(3) {
+	color: white;
+	font-size: 3.5vw !important;
+	grid-area: dimecres;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(4) {
+	color: white;
+	font-size: 3.5vw !important;
+	grid-area: dijous;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(5) {
+	color: white;
+	font-size: 3.5vw !important;
+	grid-area: divendres;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(6) {
+	color: white;
+	font-size: 3.5vw !important;
+	grid-area: bitlles;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(7) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: dillunsp;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(8) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: dimartsp;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(9) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: dimecresp;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(10) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: dijousp;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(11) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: divendresp;
+	font-family: 'Lato', sans-serif;
+}
+.tableelement:nth-child(12) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: bitllesb;
+	font-family: 'Lato', sans-serif;
+}
+
+.listcontainer {
+	display: grid;
+	align-items: center;
+	grid-template-areas: "position team total cdtotal";
+ 	gap: 0px;
+	margin: 0px 0px 0px 10px;
+	border: 0px;
+	padding: 0px;
+}
+
+.listelement:nth-child(1) {
+	color: white;
+	font-size: 5.5vw;
+	width: 65.97px;
+	grid-area: position;
+	font-family: 'Lato', sans-serif;
+}
+
+.listelement:nth-child(2) {
+	color: white;
+	font-size: 5.5vw;
+	grid-area: team;
+	font-family: 'Lato', sans-serif;
+}
+
+.listelement:nth-child(3) {
+	color: white;
+	font-size: 5.5vw;
+	grid-area: total;
+	font-family: 'Lato', sans-serif;
+}
+
+.listelement:nth-child(4) {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	grid-area: cdtotal;
+	font-size: 3.5vw;
+	transform: translateY(1vw);
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	color: white;
+	font-size: 3vh;
+	text-align: center;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+header {
+	display: grid;
+	grid-template-areas: "logo h1";
+ 	gap: 0px;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	align-items: center;
+	width: 98%;
+}
+	
+.headercolumn:nth-child(1) {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	grid-area: logo;
+	width: 28vw;
+}
+
+#footerlogo {
+	width: 15vw;
+	height: 15vw;
+	filter: invert(100%);
+	grid-column: 1;
+}
+
+#spacer {
+	width: 85vw;
+}
+
+.headercolumn:nth-child(2) {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	grid-area: h1;
+}
+
+footer {
+	background-color: black;
+	position: fixed;
+    bottom: 0;
+	display: grid;
+	align-items: center;
+}
+
+#tomenu {
+	color: white;
+	width: 38px;
+	height: 38px;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.link-spanner{
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 5;
+}
+
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+	transform: translateX(0);
+	transform-origin: left;
+	
+}
+
+html.is-animating .transition-fade {
+  opacity: 1;
+	transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+}
+
+.px25{
+	height: 35px;
+}
+
+.hidden{
+display:none;
+}
+
+.ad {
+	position: fixed;
+	width:93vw;
+	height: 93vh;
+
+	margin: 0px;
+	border: 0px;
+	gap: 0px;
+	padding: 0px;
+
+	display: grid;
+	align-items: center;
+	z-index: -2;
+	animation-name: hide;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 6.5s;
+	transform: translateY(-25vw);
+}
+
+.adimage {
+	width: 45vh;
+	height: 45vh;
+	z-index: -2;
+}
+
+.adlogo{
+	width: 65px;
+	height: 65px;
+	filter: invert(100%);
+	z-index: -2;
+}
+
+.adelement:nth-child(1) {
+	width: 65px;
+	height: 65px;
+	margin:0px auto;
+	left:0;
+	right:0;
+	animation-name: bitadlogo;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.2s;
+	-webkit-transition: cubic-bezier(1, -0.06, 0.7, 1.12);
+	transition: cubic-bezier(1, -0.06, 0.7, 1.12);
+	z-index: -2;
+}
+
+.adelement:nth-child(2) {
+	margin:0px auto;
+	left:0;
+	right:0;
+
+	height: 0vh;
+	transform: translate(70vw, -63px);
+	animation-name: patrocinadorstext;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.4s;
+	-webkit-transition: cubic-bezier(1, -0.06, 0.7, 1.12);
+	transition: cubic-bezier(1, -0.06, 0.7, 1.12);
+	z-index: -2;
+}
+
+#patrocinadorstxt {
+	font-size: 19px;
+	z-index: -2;
+}
+
+.adelement:nth-child(3) {
+	width: 43vh;
+	height: 43vh;
+	margin:0px auto;
+	left:0;
+	right:0;
+	z-index: -2;
+}
+
+.adelement:nth-child(4) {
+	width: 43vh;
+	height: 43vh;
+	margin:0px auto;
+	left:0;
+	right:0;
+	z-index: -2;
+}
+
+.adelement:nth-child(5) {
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	background: white;
+	margin:0px auto;
+	left:0;
+	right:0;
+	z-index: -1;
+	transform: translateY(50px);
+	animation-name: circle;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 5s;
+}
+
+.notad {
+	animation-name: notad;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 7s;
+	transform: scale(0%);
+	opacity: 0;
+	background-color: hsla(0, 50%, 50%, 0) !important;
+	bottom: 0;
+}
+
+@keyframes bitadlogo {
+	100% {
+		transform: translateX(-36.3vw);
+	}
+}
+
+@keyframes patrocinadorstext {
+	100% {
+		transform: translate(-30px, -63px);
+	}
+}
+
+@keyframes circle {
+	100% {
+		transform: scale(10000%);
+	}
+}
+
+@keyframes notad {
+	0% {
+		transform: scale(100%);
+		opacity: 0;
+	}
+	100% {	
+		transform: scale(100%);
+		opacity: 1;
+	}
+}
+
+@keyframes hide {
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+a {
+   text-decoration: none;
+}
+
+body {
+	background-color: rgb(0,0,0);
+	width: 98%;
+}
+
+.badgesmall {
+	filter: invert(100%);
+	padding: 10px;
+}
+
+footer {
+	position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+#headerlogo {
+	width: 33.2vw;
+	height: 33.2vw;
+	filter: invert(100%);
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	color: black;
+	font-size: 2vh;
+	text-align: center;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.button-container {
+	display: grid;
+	grid-auto-columns: auto;
+	width: 93%;
+	align-items: center;
+
+	background-color: #30302f;
+	border-radius: 7px 7px 0px 0px;
+	margin: 10px 10px 0px 10px;
+}
+
+.buttoncolumn {
+	grid-column: 1;
+	font-size: 20px;
+	width: 55vw;
+	align: left;
+	margin: 8px 8px 0px 10px;
+}
+
+.buttoncolumn2 {
+	grid-column: 2;
+	width: 3vw;
+	color: white;
+}
+
+.podium-container {
+	display: grid;
+	grid-template-areas: "badge team";
+	width: 93%;
+	align-items: center;
+	background-color: #30302f;
+	border-radius: 0px 0px 7px 7px;
+	margin: 0px 10px 10px 10px;
+}
+	
+header {
+	background-color: rgb(0,0,0);
+	display: grid;
+	grid-template-areas: "h1 logo blank";
+ 	gap: 0px;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	align-items: center;
+	width: 98%;
+}
+
+.headercolumn:nth-child(1) {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	grid-area: h1;
+	width: 32vw;
+}
+
+.hide-loader{
+display:none;
+}
+
+.headercolumn:nth-child(2) {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	grid-area: logo;
+	width: 32vw;
+}
+
+.headercolumn:nth-child(3) {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	grid-area: blank;
+	width: 32vw;
+}
+
+footer {
+	background-color: black;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	width: 98%;
+	height: 15vw;
+	font-size: 13px;
+}
+
+.px25{
+	height: 35px;
+}
+
+.link-spanner{
+	position: absolute;
+	top: 0;
+	right: 0; 
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+	transform: translateX(0);
+	transform-origin: right;
+	
+}
+
+html.is-animating .transition-fade {
+  opacity: 1;
+	transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+}

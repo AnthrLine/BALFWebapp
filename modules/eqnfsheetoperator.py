@@ -40,7 +40,7 @@ def exec():
 		rcontents.insert(4, f'<img class="badge podiumelement" src="../static/badges/badge{i+1}.png">')
 		rcontents.insert(6, str(nonetodash.nonetodash(sheetoperator.eqnfteams[int(i)])))
 		rcontents.insert(9, str(nonetodash.nonetodash(sheetoperator.eqnftotpunts[int(i)])))
-		rcontents.insert(12, str(lastdaypoints[i]))
+		rcontents.insert(12, str(nonetodash.nonetodash(lastdaypoints[i])))
 		rcontents.insert(17, f'"t{i+1}"')
 		rcontents.insert(38, str(nonetodash.nonetodash(sheetoperator.eqnfdilluns[int(i)])))
 		rcontents.insert(41, str(nonetodash.nonetodash(sheetoperator.eqnfdimarts[int(i)])))

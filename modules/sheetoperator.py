@@ -13,6 +13,11 @@ indnfmitjana = []
 indnfbitlles = []
 indnfpunts = []
 indnftirades = []
+indnfdilluns = []
+indnfdimarts = []
+indnfdimecres = []
+indnfdijous = []
+indnfdivendres = []
 
 indfnames = []
 indfteams = []
@@ -20,6 +25,11 @@ indfmitjana = []
 indfbitlles = []
 indfpunts = []
 indftirades = []
+indfdilluns = []
+indfdimarts = []
+indfdimecres = []
+indfdijous = []
+indfdivendres = []
 
 indpetnames = []
 indpetteams = []
@@ -27,6 +37,11 @@ indpetmitjana = []
 indpetbitlles = []
 indpetpunts = []
 indpettirades = []
+indpetdilluns = []
+indpetdimarts = []
+indpetdimecres = []
+indpetdijous = []
+indpetdivendres = []
 
 indgrnames = []
 indgrteams = []
@@ -34,6 +49,11 @@ indgrmitjana = []
 indgrbitlles = []
 indgrpunts = []
 indgrtirades = []
+indgrdilluns = []
+indgrdimarts = []
+indgrdimecres = []
+indgrdijous = []
+indgrdivendres = []
 
 eqnfteams = []
 eqnfdilluns = []
@@ -58,7 +78,7 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 	#WE LOAD THE WB EVERY TIME SO IT GETS UPDATED WITH THE NEW RESULTS
 	filename = 'Web.xlsx'
 	
-	workbook = load_workbook(filename=, data_only=True, read_only=True)
+	workbook = load_workbook(filename, data_only=True, read_only=True)
 	sheet = workbook.active
 
 	#GET THE NUMBER OF CANDIDATES/TEAMS
@@ -71,7 +91,7 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 	#GET THE NUMBER OF CANDIDATES/TEAMS
 
 
-	#GET THE NAMES OF THE NF CATEGORY
+	#GET THE NAMES OF THE INDNF CATEGORY
 	
 	infi = 1 #Starting pos. is on one to match sheet
 	
@@ -83,6 +103,11 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 		c4 = "E" + str(infi+1)
 		c5 = "F" + str(infi+1)
 		c6 = "G" + str(infi+1)
+		c7 = "H" + str(infi+1)
+		c8 = "I" + str(infi+1)
+		c9 = "J" + str(infi+1)
+		c10 = "K" + str(infi+1)
+		c11 = "L" + str(infi+1)
 		
 		indnfnames.append(sheet[c1].value)
 		indnfteams.append(sheet[c2].value)
@@ -90,10 +115,17 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 		indnfbitlles.append(sheet[c4].value)
 		indnfpunts.append(sheet[c5].value)
 		indnftirades.append(sheet[c6].value)
-		
-		infi += 1
+		indnfdilluns.append(sheet[c7].value)
+		indnfdimarts.append(sheet[c8].value)
+		indnfdimecres.append(sheet[c9].value)
+		indnfdijous.append(sheet[c10].value)
+		indnfdivendres.append(sheet[c11].value)
 
-	#GET THE NAMES OF THE NF CATEGORY
+		print(infi)
+		infi += 1
+	print('Infi done')
+
+	#GET THE NAMES OF THE INDNF CATEGORY
 
 	#GET THE NAMES OF THE F CATEGORY
 	
@@ -106,6 +138,11 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 		c4 = "E" + str(indfi+1)
 		c5 = "F" + str(indfi+1)
 		c6 = "G" + str(indfi+1)
+		c7 = "H" + str(indfi+1)
+		c8 = "I" + str(indfi+1)
+		c9 = "J" + str(indfi+1)
+		c10 = "K" + str(indfi+1)
+		c11 = "L" + str(indfi+1)
 	
 		indfnames.append(sheet[c1].value)
 		indfteams.append(sheet[c2].value)
@@ -113,6 +150,11 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 		indfbitlles.append(sheet[c4].value)
 		indfpunts.append(sheet[c5].value)
 		indftirades.append(sheet[c6].value)
+		indfdilluns.append(sheet[c7].value)
+		indfdimarts.append(sheet[c8].value)
+		indfdimecres.append(sheet[c9].value)
+		indfdijous.append(sheet[c10].value)
+		indfdivendres.append(sheet[c11].value)
 	
 		indfi += 1
 	#GET THE NAMES OF THE F CATEGORY
@@ -128,6 +170,11 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 		c4 = "E" + str(indpeti+1)
 		c5 = "F" + str(indpeti+1)
 		c6 = "G" + str(indpeti+1)
+		c7 = "H" + str(indpeti+1)
+		c8 = "I" + str(indpeti+1)
+		c9 = "J" + str(indpeti+1)
+		c10 = "K" + str(indpeti+1)
+		c11 = "L" + str(indpeti+1)
 	
 		indpetnames.append(sheet[c1].value)
 		indpetteams.append(sheet[c2].value)
@@ -135,6 +182,11 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 		indpetbitlles.append(sheet[c4].value)
 		indpetpunts.append(sheet[c5].value)
 		indpettirades.append(sheet[c6].value)
+		indpetdilluns.append(sheet[c7].value)
+		indpetdimarts.append(sheet[c8].value)
+		indpetdimecres.append(sheet[c9].value)
+		indpetdijous.append(sheet[c10].value)
+		indpetdivendres.append(sheet[c11].value)
 	
 		indpeti += 1
 	#GET THE NAMES OF THE PET CATEGORY
@@ -150,6 +202,12 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 		c4 = "E" + str(indgri+1)
 		c5 = "F" + str(indgri+1)
 		c5 = "G" + str(indgri+1)
+		c6 = "G" + str(indgri+1)
+		c7 = "H" + str(indgri+1)
+		c8 = "I" + str(indgri+1)
+		c9 = "J" + str(indgri+1)
+		c10 = "K" + str(indgri+1)
+		c11 = "L" + str(indgri+1)
 		
 	
 		indgrnames.append(sheet[c1].value)
@@ -158,6 +216,11 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 		indgrbitlles.append(sheet[c4].value)
 		indgrpunts.append(sheet[c5].value)
 		indgrtirades.append(sheet[c6].value)
+		indfdilluns.append(sheet[c7].value)
+		indgrdimarts.append(sheet[c8].value)
+		indgrdimecres.append(sheet[c9].value)
+		indgrdijous.append(sheet[c10].value)
+		indgrdivendres.append(sheet[c11].value)
 		
 		indgri += 1
 	#GET THE NAMES OF THE GR CATEGORY
@@ -217,6 +280,7 @@ def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individu
 		
 		eqfi += 1
 	#GET THE TEAMS INFO ON THE F CATEGORY
+	print('sheetoperator Done')
 	return("Done")
 
 

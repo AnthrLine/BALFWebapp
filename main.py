@@ -30,6 +30,11 @@ def testeqf():
 	eqfsheetoperator.exec()
 	return ("Que sigui el que déu vulgui")
 
+@app.route('/patrocinadors')
+def patrocinadors():
+	schedule.run_pending()
+	return render_template("patrocinadors.html")
+
 @app.route('/equipsfederats')
 def equipsfederats():
 	return render_template('eqf.html', ad1=ads[0], ad2=ads[1])

@@ -1,29 +1,21 @@
 from modules import sheetoperator
 
-day = 0
-categories = ['indnf', 'indf', 'indpet', 'indgr', 'eqnf', 'eqf']
-days = ['dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres']
-
-def fetchlastday(): #Returns the points of the last day
-	if sheetoperator.eqfdilluns[0] == None:
-		day = 0
-		return day
-	elif sheetoperator.eqfdimarts[0] == None:
-		day = 0
-		return day
-	elif sheetoperator.eqfdimecres[0] == None:
-		day = 1
-		return day
-	elif sheetoperator.eqfdijous[0] == None:
+def fetchlastday(individualsnf=sheetoperator.individualsnf, individualsf=sheetoperator.individualsf, individualspet=sheetoperator.individualspet, individualsgr=sheetoperator.individualsgr, equipsnf=sheetoperator.equipsnf, equipsf=sheetoperator.equipsf):
+	if sheetoperator.tot[1][3] == '':
 		day = 2
 		return day
-	elif sheetoperator.eqfdivendres[0] == None:
+	elif sheetoperator.tot[1][4] == '':
+		day = 2
+		return day
+	elif sheetoperator.tot[1][5] == '':
 		day = 3
 		return day
-	else:
+	elif sheetoperator.tot[1][6] == '':
 		day = 4
 		return day
-
-def lastday(category):
-	variable = f'{categories[category]}{days[fetchlastday()]}'
-	return (variable)
+	elif sheetoperator.tot[1][7] == '':
+		day = 5
+		return day 
+	else:
+		day = 6
+		return day

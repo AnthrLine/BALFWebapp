@@ -1,9 +1,9 @@
-from modules import sheetoperator
+from modules import sheetoperator, nonetodash
 
 def test():
 	print(sheetoperator.eqfteams[0])	
 
-def exec():
+def exec(individualsnf=sheetoperator.individualsnf, individualsf=sheetoperator.individualsf, individualspet=sheetoperator.individualspet, individualsgr=sheetoperator.individualsgr, equipsnf=sheetoperator.equipsnf, equipsf=sheetoperator.equipsf):
 	lines = []
 	with open(r"modules/indextemplate.html", 'r') as fp:
 		lines = fp.readlines() 
@@ -18,12 +18,12 @@ def exec():
 	with open("templates/index.html", "r") as readingfile:
 		rcontents = readingfile.readlines()		
 
-	rcontents.insert(39, sheetoperator.eqfteams[0])
-	rcontents.insert(56, sheetoperator.eqnfteams[0])
-	rcontents.insert(73, sheetoperator.indnfnames[0])
-	rcontents.insert(89, sheetoperator.indfnames[0])
-	rcontents.insert(107, sheetoperator.indpetnames[0])
-	rcontents.insert(124, sheetoperator.indgrnames[0])
+	rcontents.insert(39, str(nonetodash.nonetodash(sheetoperator.tot[individualsnf[0] + individualsf[0] + individualspet[0] + individualsgr[0] + equipsnf[0] + 1][1])))
+	rcontents.insert(56, str(nonetodash.nonetodash(sheetoperator.tot[individualsnf[0] + individualsf[0] + individualspet[0] + individualsgr[0] + 1][1])))
+	rcontents.insert(73, str(nonetodash.nonetodash(sheetoperator.tot[1][1])))
+	rcontents.insert(89, str(nonetodash.nonetodash(sheetoperator.tot[individualsnf[0] + 1][1])))
+	rcontents.insert(107, str(nonetodash.nonetodash(sheetoperator.tot[individualsnf[0] + individualsf[0] + 1][1])))
+	rcontents.insert(124, str(nonetodash.nonetodash(sheetoperator.tot[individualsnf[0] + individualsf[0] + individualspet[0] + 1][1])))
 	
 
 	with open("templates/index.html", "w") as f:

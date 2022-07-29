@@ -83,8 +83,8 @@ body {
 .tablecontainer {
 	display: grid;
 	align-items: center !important;
-	grid-template-areas: "promig bitlles totpunts"
-						 "promigp bitllesb totpuntsp";
+	grid-template-areas: "dilluns dimarts dimecres dijous divendres puntstotals bitlles"
+						 "dillunsp dimartsp dimecresp dijousp divendresp puntstotalsp bitllesb";
  	gap: 0px;
 	margin: 0px;
 	border: 0px;
@@ -94,7 +94,7 @@ body {
 .tableelement:nth-child(1) {
 	color: white;
 	font-size: 3.5vw !important;
-	grid-area: promig;
+	grid-area: dilluns;
 	font-family: 'Lato', sans-serif;
 	align-items: center;
 }
@@ -102,35 +102,90 @@ body {
 .tableelement:nth-child(2) {
 	color: white;
 	font-size: 3.5vw !important;
-	grid-area: bitlles;
+	grid-area: dimarts;
 	font-family: 'Lato', sans-serif;
 }
 
 .tableelement:nth-child(3) {
 	color: white;
 	font-size: 3.5vw !important;
-	grid-area: totpunts;
+	grid-area: dimecres;
 	font-family: 'Lato', sans-serif;
 }
 
 .tableelement:nth-child(4) {
 	color: white;
 	font-size: 3.5vw !important;
-	grid-area: promigp;
+	grid-area: dijous;
 	font-family: 'Lato', sans-serif;
 }
 
 .tableelement:nth-child(5) {
 	color: white;
 	font-size: 3.5vw !important;
-	grid-area: bitllesb;
+	grid-area: divendres;
 	font-family: 'Lato', sans-serif;
 }
 
 .tableelement:nth-child(6) {
 	color: white;
 	font-size: 3.5vw !important;
-	grid-area: totpuntsp;
+	grid-area: puntstotals;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(7) {
+	color: white;
+	font-size: 3.5vw !important;
+	grid-area: bitlles;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(8) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: dillunsp;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(9) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: dimartsp;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(10) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: dimecresp;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(11) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: dijousp;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(12) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: divendresp;
+	font-family: 'Lato', sans-serif;
+}
+.tableelement:nth-child(13) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: puntstotalsp;
+	font-family: 'Lato', sans-serif;
+}
+
+.tableelement:nth-child(14) {
+	color: white;
+	font-size: 4vw !important;
+	grid-area: bitllesb;
 	font-family: 'Lato', sans-serif;
 }
 

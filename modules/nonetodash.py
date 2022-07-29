@@ -1,5 +1,5 @@
 def nonetodash(data):
-	if data == None:
+	if data == '':
 		return '-'
 	else:
 		return data

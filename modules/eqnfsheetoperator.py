@@ -2,7 +2,7 @@ from modules import sheetoperator, nonetodash, lastday
 from functools import reduce
 import time
 
-def exec():
+def exec(individualsnf=sheetoperator.individualsnf, individualsf=sheetoperator.individualsf, individualspet=sheetoperator.individualspet, individualsgr=sheetoperator.individualsgr, equipsnf=sheetoperator.equipsnf, equipsf=sheetoperator.equipsf):
 	header = ''
 	podium = []
 
@@ -30,24 +30,23 @@ def exec():
 				fp.write(line)
 
 	# Edit with a loop
-	lastdayvar = str(nonetodash.nonetodash(lastday.lastday(4)))
 	i = 0
 	while i <=2:
-		lastdaypoints = getattr(sheetoperator, lastdayvar, i)
+		eqnfindex = int(individualsnf[0] + individualsf[0] + individualspet[0] + individualsgr[0] + i+1)
 		with open("workfile.html", "r") as readingfile:
 			rcontents = readingfile.readlines()
 		rcontents.insert(1, str(f'"{i+1}"'))
 		rcontents.insert(4, f'<img class="badge podiumelement" src="../static/badges/badge{i+1}.png">')
-		rcontents.insert(6, str(nonetodash.nonetodash(sheetoperator.eqnfteams[int(i)])))
-		rcontents.insert(9, str(nonetodash.nonetodash(sheetoperator.eqnftotpunts[int(i)])))
-		rcontents.insert(12, str(nonetodash.nonetodash(lastdaypoints[i])))
+		rcontents.insert(6, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][1])))
+		rcontents.insert(9, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][7])))
+		rcontents.insert(12, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][lastday.fetchlastday()])))
 		rcontents.insert(17, f'"t{i+1}"')
-		rcontents.insert(38, str(nonetodash.nonetodash(sheetoperator.eqnfdilluns[int(i)])))
-		rcontents.insert(41, str(nonetodash.nonetodash(sheetoperator.eqnfdimarts[int(i)])))
-		rcontents.insert(44, str(nonetodash.nonetodash(sheetoperator.eqnfdimecres[int(i)])))
-		rcontents.insert(47, str(nonetodash.nonetodash(sheetoperator.eqnfdijous[int(i)])))
-		rcontents.insert(50, str(nonetodash.nonetodash(sheetoperator.eqnfdivendres[int(i)])))
-		rcontents.insert(53, str(nonetodash.nonetodash(sheetoperator.eqnfbitlles[int(i)])))
+		rcontents.insert(38, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][2])))
+		rcontents.insert(41, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][3])))
+		rcontents.insert(44, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][4])))
+		rcontents.insert(47, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][5])))
+		rcontents.insert(50, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][6])))
+		rcontents.insert(53, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][8])))
 		write(rcontents)
 		i += 1
 	# PODOIUM CONTROL
@@ -65,21 +64,21 @@ def exec():
 	# Edit with a loop
 	i = 3
 	while i <= sheetoperator.equipsnf[0]-1:
-		lastdaypoints = getattr(sheetoperator, lastdayvar, i)
+		eqnfindex = int(individualsnf[0] + individualsf[0] + individualspet[0] + individualsgr[0] + i+1)
 		with open("workfile.html", "r") as readingfile:
 			rcontents = readingfile.readlines()
 		rcontents.insert(1, str(f'"{i+1}"'))
 		rcontents.insert(7, str(f'{i+1}'))
-		rcontents.insert(11, str(nonetodash.nonetodash(sheetoperator.eqnfteams[int(i)])))
-		rcontents.insert(15, str(nonetodash.nonetodash(sheetoperator.eqnftotpunts[int(i)])))
-		rcontents.insert(19, str(lastdaypoints[i]))
+		rcontents.insert(11, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][1])))
+		rcontents.insert(15, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][7])))
+		rcontents.insert(19, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][lastday.fetchlastday()])))
 		rcontents.insert(25, f'"t{i+1}"')
-		rcontents.insert(46, str(nonetodash.nonetodash(sheetoperator.eqnfdilluns[int(i)])))
-		rcontents.insert(49, str(nonetodash.nonetodash(sheetoperator.eqnfdimarts[int(i)])))
-		rcontents.insert(52, str(nonetodash.nonetodash(sheetoperator.eqnfdimecres[int(i)])))
-		rcontents.insert(55, str(nonetodash.nonetodash(sheetoperator.eqnfdijous[int(i)])))
-		rcontents.insert(58, str(nonetodash.nonetodash(sheetoperator.eqnfdivendres[int(i)])))
-		rcontents.insert(61, str(nonetodash.nonetodash(sheetoperator.eqnfbitlles[int(i)])))
+		rcontents.insert(46, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][2])))
+		rcontents.insert(49, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][3])))
+		rcontents.insert(52, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][4])))
+		rcontents.insert(55, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][5])))
+		rcontents.insert(58, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][6])))
+		rcontents.insert(61, str(nonetodash.nonetodash(sheetoperator.tot[eqnfindex][8])))
 		write(rcontents)
 		print (i)
 		i += 1

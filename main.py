@@ -59,10 +59,9 @@ def individual20102014():
 def individual20062009():
 	return render_template('indgr.html')
 
-@app.route('/execsheetoperator')
-def execsheetoperator():
-	sheetoperator.exec()
-	sheetoperator.check()
+@app.route('/csvexec')
+def csvexec():
+	sheetoperator.csvexec()
 	mainhtmloperator.exec()
 	eqfsheetoperator.exec()
 	eqnfsheetoperator.exec()
@@ -70,7 +69,6 @@ def execsheetoperator():
 	indnfsheetoperator.exec()
 	indpetsheetoperator.exec()
 	indgrsheetoperator.exec()
-		
 	return('Que sigui el que déu vulgui :)')
 
 @app.route('/admin')
@@ -114,7 +112,7 @@ def file():
 		if request.method == 'POST':
 			f = request.files['xlsx']
 			f.save(f.filename)
-			execsheetoperator()
+			csvexec()
 			return admin()
 
 	else:

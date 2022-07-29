@@ -1,6 +1,7 @@
 from openpyxl import Workbook, load_workbook
 import pandas as pd
 import csv
+import os
 
 individualsnf = [0]
 individualsf = [0]
@@ -80,8 +81,9 @@ tot =[0]
 
 
 def csvexec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individualsgr, ef=equipsf, enf=equipsnf):
-	read_file = pd.read_excel ("Web.xlsx")
-	read_file.to_csv ("Web.csv", 
+	os.remove('Web.csv')
+	read_file = pd.read_excel("Web.xlsx")
+	read_file.to_csv("Web.csv",
                   index = None,
                   header=None)
 

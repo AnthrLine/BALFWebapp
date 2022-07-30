@@ -319,7 +319,7 @@ display:none;
 	animation-name: hide;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-	animation-delay: 6.5s;
+	animation-delay: 5.5s;
 	transform: translateY(-25vw);
 }
 
@@ -342,12 +342,12 @@ display:none;
 	margin:0px auto;
 	left:0;
 	right:0;
-	animation-name: bitadlogo;
+/* 	animation-name: bitadlogo;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 	animation-delay: 1.2s;
 	-webkit-transition: cubic-bezier(1, -0.06, 0.7, 1.12);
-	transition: cubic-bezier(1, -0.06, 0.7, 1.12);
+	transition: cubic-bezier(1, -0.06, 0.7, 1.12); */
 	z-index: -2;
 }
 
@@ -358,12 +358,12 @@ display:none;
 
 	height: 0vh;
 	transform: translate(70vw, -63px);
-	animation-name: patrocinadorstext;
+/* 	animation-name: patrocinadorstext;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 	animation-delay: 1.4s;
 	-webkit-transition: cubic-bezier(1, -0.06, 0.7, 1.12);
-	transition: cubic-bezier(1, -0.06, 0.7, 1.12);
+	transition: cubic-bezier(1, -0.06, 0.7, 1.12); */
 	z-index: -2;
 }
 
@@ -400,39 +400,39 @@ display:none;
 	right:0;
 	z-index: -1;
 	transform: translateY(50px);
-	animation-name: circle;
-	animation-duration: 2s;
+/* 	animation-name: circle; */
+/* 	animation-duration: 2s;
 	animation-fill-mode: forwards;
-	animation-delay: 5s;
+	animation-delay: 5s; */
 }
 
 .notad {
 	animation-name: notad;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-	animation-delay: 7s;
+	animation-delay: 6s;
 	transform: scale(0%);
 	opacity: 0;
 	bottom: 0;
 }
 
-@keyframes bitadlogo {
+/* @keyframes bitadlogo {
 	100% {
 		transform: translateX(-36.3vw);
 	}
-}
-
+} */
+/* 
 @keyframes patrocinadorstext {
 	100% {
 		transform: translate(-30px, -63px);
 	}
-}
+} */
 
-@keyframes circle {
+/* @keyframes circle {
 	100% {
 		transform: scale(10000%);
 	}
-}
+} */
 
 @keyframes notad {
 	0% {

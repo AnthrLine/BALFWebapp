@@ -10,8 +10,6 @@ individualsgr = [0]
 equipsnf = [0]
 equipsf = [0]
 
-tot =[0]
-
 # indnf = []
 # indnfnames = []
 # indnfteams = []
@@ -81,7 +79,12 @@ tot =[0]
 
 
 def csvexec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individualsgr, ef=equipsf, enf=equipsnf):
-	os.remove('Web.csv')
+	global tot
+	tot = [0]
+	
+	if os.path.exists('Web.csv'):
+		os.remove('Web.csv')
+		
 	read_file = pd.read_excel("Web.xlsx")
 	read_file.to_csv("Web.csv",
                   index = None,
@@ -99,12 +102,11 @@ def csvexec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=indiv
 	enf.insert(0, sheet["E1"].value)
 	ef.insert(0, sheet["F1"].value)
 
-	with open('Web.csv') as file_obj:
-		reader_obj = csv.reader(file_obj)
-		i = 0
-		for row in reader_obj:
-		
-			tot.append(row)
+	with open('Web.csv', mode ='r') as file_obj:
+		csvfile = csv.reader(file_obj)
+		for lines in csvfile:
+			tot.append(lines)
+		print(tot)
 
 
 # def exec(inf=individualsnf, indf=individualsf, ipet=individualspet, igr=individualsgr, ef=equipsf, enf=equipsnf):

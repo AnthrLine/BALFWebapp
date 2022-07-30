@@ -3,7 +3,9 @@ import requests
 import time
 import uuid
 import schedule
-from modules import sheetoperator, mainhtmloperator, eqfsheetoperator, lastday, eqnfsheetoperator, indfsheetoperator, indnfsheetoperator, indpetsheetoperator, indgrsheetoperator, adgenerator
+import os
+from threading import Thread
+from modules import sheetoperator, mainhtmloperator, eqfsheetoperator, lastday, eqnfsheetoperator, indfsheetoperator, indnfsheetoperator, indpetsheetoperator, indgrsheetoperator, adgenerator, schedulef
 
 
 app = Flask('app')
@@ -108,12 +110,14 @@ def login():
 
 @app.route('/file', methods = ['POST', 'GET'])
 def file():
+	if os.path.exists('Web.xlsx'):
+		os.remove('Web.xlsx')
 	if request.cookies.get('uuid') == str(getuuid()):
 		if request.method == 'POST':
 			f = request.files['xlsx']
 			f.save(f.filename)
 			csvexec()
-			return admin()
+			return admin()	
 
 	else:
 		return("You don't have permission to do that")
@@ -121,6 +125,8 @@ def file():
 if __name__ == '__main__':
 	schedule.every(10).seconds.do(generateads)
 	schedule.run_pending()
+	t = Thread(target=schedulef.run)
+	t.start()
 	app.config['TESTING'] = True
 	app.config['UPLOAD_FOLDER'] = '/'
 	app.config['TEMPLATES_AUTO_RELOAD'] = True

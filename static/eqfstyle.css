@@ -31,6 +31,7 @@ body {
 	margin: 0px;
 	border: 0px;
 	padding: 0px;
+	width: 100vw;
 }
 
 .podiumelement:nth-child(1) {
@@ -52,6 +53,7 @@ body {
 	border: 0px;
 	padding: 0px;
 	grid-area: team;
+	width: 53.24vw;
 }
 
 .podiumelement:nth-child(3) {
@@ -181,6 +183,7 @@ body {
 	width: 65.97px;
 	grid-area: position;
 	font-family: 'Lato', sans-serif;
+	width: 11.5vw;
 }
 
 .listelement:nth-child(2) {
@@ -188,6 +191,7 @@ body {
 	font-size: 5.5vw;
 	grid-area: team;
 	font-family: 'Lato', sans-serif;
+	width: 53.24vw;
 }
 
 .listelement:nth-child(3) {

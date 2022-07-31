@@ -80,6 +80,20 @@ h1 {
 	background-color: #30302f;
 	border-radius: 0px 0px 7px 7px;
 	margin: 0px 10px 10px 10px;
+	gap: 0px;
+	grid-auto-columns: minmax(10px, auto);
+	border: 0px;
+	padding: 0px;
+}
+
+.podiumbutton:nth-child(1) {
+	grid-area: badge;
+	width: 15.85vw;
+}
+
+.podiumbutton:nth-child(2) {
+	grid-area: team;
+	width: 80vw;
 }
 	
 header {

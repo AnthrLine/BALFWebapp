@@ -10,13 +10,9 @@ if (isMobileDevice) {
 	window.location.replace("https://google.com");
 }
 
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker
-  .register('../sw.js')
-  .then(function() {
-    console.log("Service Worker registered successfully");
-  })
-  .catch(function() {
-    console.log("Service worker registration failed")
-  });
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/static/sw.js");
+    });
 }

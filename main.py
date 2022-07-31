@@ -5,7 +5,7 @@ import uuid
 import schedule
 import os
 from threading import Thread
-from modules import sheetoperator, mainhtmloperator, eqfsheetoperator, lastday, eqnfsheetoperator, indfsheetoperator, indnfsheetoperator, indpetsheetoperator, indgrsheetoperator, adgenerator, schedulef
+from modules import sheetoperator, mainhtmloperator, eqfsheetoperator, eqnfsheetoperator, indfsheetoperator, indnfsheetoperator, indpetsheetoperator, indgrsheetoperator, adgenerator, schedulef
 
 
 app = Flask('app')
@@ -39,6 +39,7 @@ def patrocinadors():
 
 @app.route('/equipsfederats')
 def equipsfederats():
+	generateads()
 	return render_template('eqf.html', ad1=ads[0], ad2=ads[1])
 
 @app.route('/equipsnofederats')
@@ -71,6 +72,7 @@ def csvexec():
 	indnfsheetoperator.exec()
 	indpetsheetoperator.exec()
 	indgrsheetoperator.exec()
+	generateads()
 	return('Que sigui el que déu vulgui :)')
 
 @app.route('/admin')

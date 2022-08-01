@@ -10,13 +10,12 @@ from modules import sheetoperator, mainhtmloperator, eqfsheetoperator, eqnfsheet
 
 app = Flask('app')
 
-ads = []
+ads = [1, 2, 3, 13, 18, 11, 12, 4, 5, 6, 9, 10]
 
 def generateads():
 	global ads
 	ads = adgenerator.generate()
 		
-
 @app.route('/')
 def main():
 	schedule.run_pending()

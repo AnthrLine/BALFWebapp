@@ -52,6 +52,7 @@ body {
 	border: 0px;
 	padding: 0px;
 	grid-area: player;
+	width: 53.24vw;
 }
 
 .podiumelement:nth-child(3) {
@@ -211,6 +212,7 @@ body {
 	color: white;
 	font-size: 5.5vw;
 	grid-area: team;
+	width: 53.24vw;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -290,7 +292,7 @@ header {
 
 footer {
 	position: fixed;
-    bottom: 0;
+    bottom: 0 !important;
 	display: grid;
 	align-items: center;
 	background-color: black;
@@ -351,6 +353,11 @@ display:none;
 	display: grid;
 	align-items: center;
 	z-index: -2;
+	animation-name: hide;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 5.5s;
+	transform: translateY(-25vw);
 }
 
 .adimage {
@@ -372,12 +379,12 @@ display:none;
 	margin:0px auto;
 	left:0;
 	right:0;
-	animation-name: bitadlogo;
+/* 	animation-name: bitadlogo;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 	animation-delay: 1.2s;
 	-webkit-transition: cubic-bezier(1, -0.06, 0.7, 1.12);
-	transition: cubic-bezier(1, -0.06, 0.7, 1.12);
+	transition: cubic-bezier(1, -0.06, 0.7, 1.12); */
 	z-index: -2;
 }
 
@@ -388,12 +395,12 @@ display:none;
 
 	height: 0vh;
 	transform: translate(70vw, -63px);
-	animation-name: patrocinadorstext;
+/* 	animation-name: patrocinadorstext;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 	animation-delay: 1.4s;
 	-webkit-transition: cubic-bezier(1, -0.06, 0.7, 1.12);
-	transition: cubic-bezier(1, -0.06, 0.7, 1.12);
+	transition: cubic-bezier(1, -0.06, 0.7, 1.12); */
 	z-index: -2;
 }
 
@@ -430,26 +437,54 @@ display:none;
 	right:0;
 	z-index: -1;
 	transform: translateY(50px);
-	animation-name: circle;
-	animation-duration: 2s;
+/* 	animation-name: circle; */
+/* 	animation-duration: 2s;
 	animation-fill-mode: forwards;
-	animation-delay: 5s;
+	animation-delay: 5s; */
 }
 
-@keyframes bitadlogo {
+.notad {
+	animation-name: notad;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 6s;
+	transform: scale(0%);
+	opacity: 0;
+	bottom: 0;
+}
+
+/* @keyframes bitadlogo {
 	100% {
 		transform: translateX(-36.3vw);
 	}
-}
-
+} */
+/* 
 @keyframes patrocinadorstext {
 	100% {
 		transform: translate(-30px, -63px);
 	}
-}
+} */
 
-@keyframes circle {
+/* @keyframes circle {
 	100% {
 		transform: scale(10000%);
+	}
+} */
+
+@keyframes notad {
+	0% {
+		transform: scale(100%);
+		opacity: 0;
+	}
+	100% {	
+		transform: scale(100%);
+		opacity: 1;
+	}
+}
+
+@keyframes hide {
+	100% {
+		opacity: 0;
+		display: none;
 	}
 }

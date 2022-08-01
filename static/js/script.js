@@ -13,6 +13,6 @@ if (isMobileDevice) {
 
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
-        navigator.serviceWorker.register("/static/sw.js");
+        navigator.serviceWorker.register("/sw.js");
     });
 }

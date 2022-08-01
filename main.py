@@ -22,12 +22,16 @@ def main():
 	schedule.run_pending()
 	return render_template("index.html")
 
+@app.route('/sw.js')
+def sw():
+	return send_file("sw.js")
+
 @app.route('/index')
 def index():
 	schedule.run_pending()
 	return render_template("index.html")
 
-@app.route('/testeqf')
+#@app.route('/testeqf')
 def testeqf():
 	eqfsheetoperator.exec()
 	return ("Que sigui el que déu vulgui")
@@ -48,21 +52,21 @@ def equipsnofederats():
 
 @app.route('/individualnofederats')
 def individualnofederats():
-	return render_template('indnf.html')
+	return render_template('indnf.html', ad1=ads[4], ad2=ads[5])
 
 @app.route('/individualfederats')
 def individualfederats():
-	return render_template('indf.html')
+	return render_template('indf.html', ad1=ads[6], ad2=ads[7])
 
 @app.route('/individual20102014')
 def individual20102014():
-	return render_template('indpet.html')
+	return render_template('indpet.html', ad1=ads[8], ad2=ads[9])
 
 @app.route('/individual20062009')
 def individual20062009():
-	return render_template('indgr.html')
+	return render_template('indgr.html', ad1=ads[10], ad2=ads[11])
 
-@app.route('/csvexec')
+#@app.route('/csvexec')
 def csvexec():
 	sheetoperator.csvexec()
 	mainhtmloperator.exec()
